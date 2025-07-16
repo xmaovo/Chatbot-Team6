@@ -30,6 +30,13 @@ Additional instructions:
 - Treat forward-looking statements cautiously; clarify if the source is a projection or estimate.
 - If user input is vague or overly broad, always follow up with a clarification request that reflects the context of the question.
 
+Style guidance:
+- You are expected to respond in a style consistent with high-quality financial briefings.
+- When comparisons between companies are requested, structure your answer in parallel (e.g., Amazon first, then Alphabet, then Microsoft).
+- Be concise but complete. Avoid lists or bullet points unless necessary.
+- Prioritize numerical precision and clarity (e.g., "$123.4 billion in 2023" instead of "a lot of revenue").
+- When appropriate, synthesize information across companies to highlight differences or similarities.
+
 Maintain a professional, neutral tone and clearly communicate any limitations in the available data.
 '''
 
@@ -38,6 +45,26 @@ template = """
         
 Chat History:
 <history>
+
+User: What is the primary business segment driving revenue for Amazon, Google, and Microsoft, and how do they differ?
+Assistant: Amazon primarily earns revenue through its North America and International retail segments, but Amazon Web Services (AWS) is its most profitable division. Google (Alphabet) derives most of its revenue from advertising across Google Search, YouTube, and Google Network, with Google Cloud as a growing segment. Microsoft generates its highest revenue from its cloud computing services, including Azure, followed by Office software and Windows products.
+
+User: How are each of the three companies investing in artificial intelligence, and what unique AI products or services do they highlight?
+Assistant: Alphabet focuses heavily on AI with its Gemini models integrated across Google services like Search, Gmail, and YouTube. Microsoft invests deeply in OpenAI partnerships, embedding Copilot into Office 365, Azure, and GitHub. Amazon offers generative AI tools through AWS Bedrock and Titan models, along with custom AI chips like Trainium and Inferentia.
+
+User: Which geographic regions or international segments contribute most significantly to each company's growth strategy?
+Assistant: Amazon's International segment supports global expansion but operates with thinner margins than North America. Microsoft reports strong international performance from enterprise cloud services and global datacenters. Alphabet highlights international user growth, especially in emerging markets, as a key driver for advertising and YouTube.
+
+User: What are the major risks each company identifies as critical to its long-term sustainability and competitive edge?
+Assistant: All three companies list regulatory pressures, cybersecurity threats, and antitrust scrutiny as top risks. Amazon also notes workforce challenges and logistics costs; Microsoft highlights intellectual property concerns; and Alphabet cites changes to advertising policies and evolving AI regulation.
+
+User: How does each company describe its commitment to sustainability, and what specific environmental goals have they publicly committed to?
+Assistant: Microsoft aims to be carbon negative, water positive, and zero waste by 2030. Alphabet targets operating on 24/7 carbon-free energy by 2030 across all locations. Amazon emphasizes The Climate Pledge, aiming for net-zero carbon by 2040 and significant investments in renewable energy and electric delivery vehicles.
+
+User: How does each company balance innovation with ethical concerns, especially around data privacy, AI use, or labor practices?
+Assistant: Alphabet follows its AI Principles to guide ethical AI development and has emphasized responsible use in Gemini deployments. Microsoft leads with AI safety research and transparent frameworks, including tools for responsible AI governance. Amazon highlights workforce safety investments, privacy controls in devices like Alexa, and ethical AI within its cloud services.
+
+
 {chat_history}
 </history>
 
@@ -115,7 +142,7 @@ if uploaded_files:
         # Configure retriever with more advanced parameters
         retriever = st.session_state.vector_store.as_retriever(
             search_type="mmr",  # Maximum Marginal Relevance
-            search_kwargs={"k": 8, "fetch_k": 40, "lambda_mult": 0.8}  # Adjust these parameters as needed
+            search_kwargs={"k": 8, "fetch_k": 40, "lambda_mult": 0.8} # Adjust these parameters as needed
         )
         
         # Get chat history for context

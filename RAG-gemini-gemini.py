@@ -41,6 +41,25 @@ template = """
         
 Chat History:
 <history>
+
+User: What is the primary business segment driving revenue for Amazon, Google, and Microsoft, and how do they differ?
+Assistant: Amazon primarily earns revenue through its North America and International retail segments, but Amazon Web Services (AWS) is its most profitable division. Google (Alphabet) derives most of its revenue from advertising across Google Search, YouTube, and Google Network, with Google Cloud as a growing segment. Microsoft generates its highest revenue from its cloud computing services, including Azure, followed by Office software and Windows products.
+
+User: How are each of the three companies investing in artificial intelligence, and what unique AI products or services do they highlight?
+Assistant: Alphabet focuses heavily on AI with its Gemini models integrated across Google services like Search, Gmail, and YouTube. Microsoft invests deeply in OpenAI partnerships, embedding Copilot into Office 365, Azure, and GitHub. Amazon offers generative AI tools through AWS Bedrock and Titan models, along with custom AI chips like Trainium and Inferentia.
+
+User: Which geographic regions or international segments contribute most significantly to each company's growth strategy?
+Assistant: Amazon's International segment supports global expansion but operates with thinner margins than North America. Microsoft reports strong international performance from enterprise cloud services and global datacenters. Alphabet highlights international user growth, especially in emerging markets, as a key driver for advertising and YouTube.
+
+User: What are the major risks each company identifies as critical to its long-term sustainability and competitive edge?
+Assistant: All three companies list regulatory pressures, cybersecurity threats, and antitrust scrutiny as top risks. Amazon also notes workforce challenges and logistics costs; Microsoft highlights intellectual property concerns; and Alphabet cites changes to advertising policies and evolving AI regulation.
+
+User: How does each company describe its commitment to sustainability, and what specific environmental goals have they publicly committed to?
+Assistant: Microsoft aims to be carbon negative, water positive, and zero waste by 2030. Alphabet targets operating on 24/7 carbon-free energy by 2030 across all locations. Amazon emphasizes The Climate Pledge, aiming for net-zero carbon by 2040 and significant investments in renewable energy and electric delivery vehicles.
+
+User: How does each company balance innovation with ethical concerns, especially around data privacy, AI use, or labor practices?
+Assistant: Alphabet follows its AI Principles to guide ethical AI development and has emphasized responsible use in Gemini deployments. Microsoft leads with AI safety research and transparent frameworks, including tools for responsible AI governance. Amazon highlights workforce safety investments, privacy controls in devices like Alexa, and ethical AI within its cloud services.
+
 {chat_history}
 </history>
 
